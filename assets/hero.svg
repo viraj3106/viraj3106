@@ -99,7 +99,7 @@
     .tech-grid { animation: gridMove 25s linear infinite; }
     @keyframes gridMove { 0% { transform: translate(0, 0); } 100% { transform: translate(40px, 40px); } }
 
-    /* Nodes & Pipelines */
+    /* Nodes and Pipelines */
     .net-flow { stroke-dasharray: 8 6; animation: dashFlow 12s linear infinite; }
     .pulse-dot { animation: pulseGreen 2.5s ease-in-out infinite; }
     @keyframes dashFlow { to { stroke-dashoffset: -200; } }
@@ -148,7 +148,7 @@
     </g>
   </g>
 
-  <!-- ================= LAYER 4: PIPELINES & CONNECTION NETWORK ================= -->
+  <!-- ================= LAYER 4: PIPELINES AND CONNECTION NETWORK ================= -->
   <g opacity="0.4">
     <!-- Connecting network lines -->
     <path class="net-flow" d="M 120,380 Q 240,400 320,380 T 520,390 T 780,380" fill="none" stroke="url(#specFull)" stroke-width="1.5" />
