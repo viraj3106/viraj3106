@@ -64,6 +64,10 @@
 <a name="work"></a>
 ## 02 — SELECTED WORK
 
+<div align="center">
+  <img src="assets/repository-stack.svg" width="100%" alt="Animated Project Card Stack" style="max-width: 800px; margin-bottom: 24px; border-radius: 8px;" />
+</div>
+
 <table width="100%" style="border-collapse: collapse; border: none;">
   <!-- Row 1 -->
   <tr style="border: none;">

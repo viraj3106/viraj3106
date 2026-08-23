@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="340" viewBox="0 0 800 340">
+  <defs>
+    <!-- Card Gradients -->
+    <linearGradient id="jogpalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22C55E" />
+      <stop offset="50%" stop-color="#00C7BE" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="boctGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A855F7" />
+      <stop offset="50%" stop-color="#EC4899" />
+      <stop offset="100%" stop-color="#F43F5E" />
+    </linearGradient>
+    <linearGradient id="codealphaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B00" />
+      <stop offset="50%" stop-color="#FFCC00" />
+      <stop offset="100%" stop-color="#FF3B30" />
+    </linearGradient>
+    <linearGradient id="helpdeskGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="50%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#7C3AED" />
+    </linearGradient>
+    
+    <!-- Glow Filters -->
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .card-container {
+      transform-origin: center;
+    }
+    .card-bg {
+      fill: #0F0F12;
+      stroke: rgba(255,255,255,0.06);
+      stroke-width: 1.5;
+    }
+    
+    /* 4-Card Stack Loop Animation (16s Total, 4s per stage) */
+    .card-1 { animation: cycleCard1 16s cubic-bezier(0.25, 0.8, 0.25, 1) infinite; }
+    .card-2 { animation: cycleCard2 16s cubic-bezier(0.25, 0.8, 0.25, 1) infinite; }
+    .card-3 { animation: cycleCard3 16s cubic-bezier(0.25, 0.8, 0.25, 1) infinite; }
+    .card-4 { animation: cycleCard4 16s cubic-bezier(0.25, 0.8, 0.25, 1) infinite; }
+
+    /* Keyframes for Card 1 (Starts Front) */
+    @keyframes cycleCard1 {
+      0%, 20% { transform: translate(180px, 60px) scale(1); opacity: 1; z-index: 4; }
+      25%, 45% { transform: translate(320px, 20px) scale(0.85); opacity: 0.4; z-index: 1; }
+      50%, 70% { transform: translate(180px, 0px) scale(0.8); opacity: 0.2; z-index: 0; }
+      75%, 95% { transform: translate(40px, 20px) scale(0.85); opacity: 0.4; z-index: 2; }
+      100% { transform: translate(180px, 60px) scale(1); opacity: 1; z-index: 4; }
+    }
+
+    /* Keyframes for Card 2 (Starts Mid-Right) */
+    @keyframes cycleCard2 {
+      0%, 20% { transform: translate(320px, 20px) scale(0.85); opacity: 0.4; z-index: 2; }
+      25%, 45% { transform: translate(180px, 0px) scale(0.8); opacity: 0.2; z-index: 0; }
+      50%, 70% { transform: translate(40px, 20px) scale(0.85); opacity: 0.4; z-index: 1; }
+      75%, 95% { transform: translate(180px, 60px) scale(1); opacity: 1; z-index: 4; }
+      100% { transform: translate(320px, 20px) scale(0.85); opacity: 0.4; z-index: 2; }
+    }
+
+    /* Keyframes for Card 3 (Starts Back) */
+    @keyframes cycleCard3 {
+      0%, 20% { transform: translate(180px, 0px) scale(0.8); opacity: 0.2; z-index: 0; }
+      25%, 45% { transform: translate(40px, 20px) scale(0.85); opacity: 0.4; z-index: 1; }
+      50%, 70% { transform: translate(180px, 60px) scale(1); opacity: 1; z-index: 4; }
+      75%, 95% { transform: translate(320px, 20px) scale(0.85); opacity: 0.4; z-index: 2; }
+      100% { transform: translate(180px, 0px) scale(0.8); opacity: 0.2; z-index: 0; }
+    }
+
+    /* Keyframes for Card 4 (Starts Mid-Left) */
+    @keyframes cycleCard4 {
+      0%, 20% { transform: translate(40px, 20px) scale(0.85); opacity: 0.4; z-index: 1; }
+      25%, 45% { transform: translate(180px, 60px) scale(1); opacity: 1; z-index: 4; }
+      50%, 70% { transform: translate(320px, 20px) scale(0.85); opacity: 0.4; z-index: 2; }
+      75%, 95% { transform: translate(180px, 0px) scale(0.8); opacity: 0.2; z-index: 0; }
+      100% { transform: translate(40px, 20px) scale(0.85); opacity: 0.4; z-index: 1; }
+    }
+
+    /* Typography */
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      fill: #FFFFFF;
+      letter-spacing: 1px;
+    }
+    .tag {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      fill: #FFFFFF;
+      letter-spacing: 1.5px;
+    }
+    .desc {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 12px;
+      fill: #8E8E93;
+      line-height: 1.5;
+    }
+    .meta-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      fill: #E5E5EA;
+    }
+    .meta-val {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 11px;
+      fill: #8E8E93;
+    }
+  </style>
+
+  <!-- Background Base Canvas -->
+  <rect width="800" height="340" fill="#09090B" rx="8" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+
+  <!-- ================= CARD 3 (CodeAlpha Tasks) ================= -->
+  <g class="card-3 card-container">
+    <rect class="card-bg" width="440" height="240" rx="12" />
+    <rect width="440" height="240" rx="12" fill="none" stroke="url(#codealphaGrad)" stroke-width="1.5" opacity="0.4" />
+    <rect x="24" y="24" width="130" height="20" rx="10" fill="rgba(255,107,0,0.1)" />
+    <text class="tag" x="34" y="37" fill="#FF6B00">HTML • CSS • COMPILATION</text>
+    <text class="title" x="24" y="75">codealpha_tasks</text>
+    <text class="desc" x="24" y="102">
+      <tspan x="24" dy="0">Structured frontend code repositories mapping tasks,</tspan>
+      <tspan x="24" dy="18">functional styles, and micro-layouts built during</tspan>
+      <tspan x="24" dy="18">practical UI engineering modules.</tspan>
+    </text>
+    <line x1="24" y1="160" x2="416" y2="160" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+    <text class="meta-title" x="24" y="185">STACK</text>
+    <text class="meta-val" x="24" y="202">HTML5 / CSS3 / Vanilla JS</text>
+    <text class="meta-title" x="220" y="185">ROLE</text>
+    <text class="meta-val" x="220" y="202">Interface Architect</text>
+  </g>
+
+  <!-- ================= CARD 4 (Helpdesk) ================= -->
+  <g class="card-4 card-container">
+    <rect class="card-bg" width="440" height="240" rx="12" />
+    <rect width="440" height="240" rx="12" fill="none" stroke="url(#helpdeskGrad)" stroke-width="1.5" opacity="0.4" />
+    <rect x="24" y="24" width="130" height="20" rx="10" fill="rgba(37,99,235,0.1)" />
+    <text class="tag" x="34" y="37" fill="#2563EB">SAAS • WORKFLOW • UX</text>
+    <text class="title" x="24" y="75">Helpdesk System</text>
+    <text class="desc" x="24" y="102">
+      <tspan x="24" dy="0">A keyboard-first customer support dashboard built</tspan>
+      <tspan x="24" dy="18">to optimize ticket resolution times and minimize</tspan>
+      <tspan x="24" dy="18">support agent interface fatigue.</tspan>
+    </text>
+    <line x1="24" y1="160" x2="416" y2="160" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+    <text class="meta-title" x="24" y="185">STACK</text>
+    <text class="meta-val" x="24" y="202">React / TypeScript / Tailwind</text>
+    <text class="meta-title" x="220" y="185">ROLE</text>
+    <text class="meta-val" x="220" y="202">UI/UX &amp; Interaction Designer</text>
+  </g>
+
+  <!-- ================= CARD 2 (BOCT) ================= -->
+  <g class="card-2 card-container">
+    <rect class="card-bg" width="440" height="240" rx="12" />
+    <rect width="440" height="240" rx="12" fill="none" stroke="url(#boctGrad)" stroke-width="1.5" opacity="0.4" />
+    <rect x="24" y="24" width="130" height="20" rx="10" fill="rgba(168,85,247,0.1)" />
+    <text class="tag" x="34" y="37" fill="#A855F7">AI • CANVAS • INTERFACE</text>
+    <text class="title" x="24" y="75">BOCT Playground</text>
+    <text class="desc" x="24" y="102">
+      <tspan x="24" dy="0">A node-based pipeline editor designed to visually</tspan>
+      <tspan x="24" dy="18">link data streams, transformer models, and AI agent</tspan>
+      <tspan x="24" dy="18">prompts in a clean workspace canvas.</tspan>
+    </text>
+    <line x1="24" y1="160" x2="416" y2="160" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+    <text class="meta-title" x="24" y="185">STACK</text>
+    <text class="meta-val" x="24" y="202">React Flow / Tailwind / Supabase</text>
+    <text class="meta-title" x="220" y="185">ROLE</text>
+    <text class="meta-val" x="220" y="202">Product Designer</text>
+  </g>
+
+  <!-- ================= CARD 1 (Jogpal) ================= -->
+  <g class="card-1 card-container">
+    <rect class="card-bg" width="440" height="240" rx="12" filter="url(#cardGlow)" />
+    <rect width="440" height="240" rx="12" fill="none" stroke="url(#jogpalGrad)" stroke-width="1.5" opacity="0.75" />
+    <rect x="24" y="24" width="130" height="20" rx="10" fill="rgba(34,197,94,0.1)" />
+    <text class="tag" x="34" y="37" fill="#22C55E">PRODUCT • UX • FITNESS</text>
+    <text class="title" x="24" y="75">Jogpal Run</text>
+    <text class="desc" x="24" y="102">
+      <tspan x="24" dy="0">A mobile social running platform designed to boost</tspan>
+      <tspan x="24" dy="18">runner motivation through real-time route feedback,</tspan>
+      <tspan x="24" dy="18">loops, and peer-to-peer stats visualization.</tspan>
+    </text>
+    <line x1="24" y1="160" x2="416" y2="160" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+    <text class="meta-title" x="24" y="185">STACK</text>
+    <text class="meta-val" x="24" y="202">Figma / Framer / Mapbox SDKs</text>
+    <text class="meta-title" x="220" y="185">ROLE</text>
+    <text class="meta-val" x="220" y="202">UI/UX Design &amp; Product Strategy</text>
+  </g>
+</svg>
