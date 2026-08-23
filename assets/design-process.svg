@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="140" viewBox="0 0 800 140">
+  <defs>
+    <!-- Glowing filter -->
+    <filter id="nodeGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <!-- Spectrum Gradient for Path -->
+    <linearGradient id="pathGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF3B30" />
+      <stop offset="20%" stop-color="#FF6B00" />
+      <stop offset="40%" stop-color="#FFCC00" />
+      <stop offset="60%" stop-color="#22C55E" />
+      <stop offset="80%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#A855F7" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .background {
+      fill: #0F0F12;
+      stroke: rgba(255,255,255,0.05);
+      stroke-width: 1;
+    }
+    .base-path {
+      stroke: rgba(255,255,255,0.08);
+      stroke-width: 2;
+    }
+    .active-path {
+      stroke: url(#pathGrad);
+      stroke-width: 2;
+      stroke-dasharray: 660;
+      stroke-dashoffset: 660;
+      animation: fillPath 12s ease-in-out infinite alternate;
+    }
+    .traveler {
+      animation: travelNode 12s ease-in-out infinite alternate;
+    }
+    .label {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-anchor: middle;
+      fill: #8E8E93;
+    }
+    .step-label {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      text-anchor: middle;
+      fill: #FFFFFF;
+    }
+    .step-dot {
+      transition: fill 0.3s;
+    }
+    
+    @keyframes fillPath {
+      0% { stroke-dashoffset: 660; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes travelNode {
+      0% { cx: 70px; cy: 70px; fill: #FF3B30; }
+      20% { cx: 202px; cy: 70px; fill: #FF6B00; }
+      40% { cx: 334px; cy: 70px; fill: #FFCC00; }
+      60% { cx: 466px; cy: 70px; fill: #22C55E; }
+      80% { cx: 598px; cy: 70px; fill: #2563EB; }
+      100% { cx: 730px; cy: 70px; fill: #A855F7; }
+    }
+  </style>
+
+  <!-- Card Background -->
+  <rect class="background" x="2" y="2" width="796" height="136" rx="8" />
+
+  <!-- Base Connecting Line -->
+  <line class="base-path" x1="70" y1="70" x2="730" y2="70" />
+  
+  <!-- Active Spectrum Line -->
+  <line class="active-path" x1="70" y1="70" x2="730" y2="70" />
+
+  <!-- Stages Nodes -->
+  <!-- 01 Discover -->
+  <circle class="step-dot" cx="70" cy="70" r="5" fill="#FF3B30" />
+  <text class="label" x="70" y="38">01</text>
+  <text class="step-label" x="70" y="105">DISCOVER</text>
+
+  <!-- 02 Define -->
+  <circle class="step-dot" cx="202" cy="70" r="5" fill="#FF6B00" />
+  <text class="label" x="202" y="38">02</text>
+  <text class="step-label" x="202" y="105">DEFINE</text>
+
+  <!-- 03 Design -->
+  <circle class="step-dot" cx="334" cy="70" r="5" fill="#FFCC00" />
+  <text class="label" x="334" y="38">03</text>
+  <text class="step-label" x="334" y="105">DESIGN</text>
+
+  <!-- 04 Prototype -->
+  <circle class="step-dot" cx="466" cy="70" r="5" fill="#22C55E" />
+  <text class="label" x="466" y="38">04</text>
+  <text class="step-label" x="466" y="105">PROTOTYPE</text>
+
+  <!-- 05 Build -->
+  <circle class="step-dot" cx="598" cy="70" r="5" fill="#2563EB" />
+  <text class="label" x="598" y="38">05</text>
+  <text class="step-label" x="598" y="105">BUILD</text>
+
+  <!-- 06 Iterate -->
+  <circle class="step-dot" cx="730" cy="70" r="5" fill="#A855F7" />
+  <text class="label" x="730" y="38">06</text>
+  <text class="step-label" x="730" y="105">ITERATE</text>
+
+  <!-- Traveling Glowing Node -->
+  <circle class="traveler" cx="70" cy="70" r="8" filter="url(#nodeGlow)" stroke="#FFFFFF" stroke-width="1.5" />
+</svg>

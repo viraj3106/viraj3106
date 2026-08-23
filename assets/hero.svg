@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="320" viewBox="0 0 850 320">
+  <defs>
+    <!-- Radial Gradients for Aurora Orbs -->
+    <radialGradient id="orbRed" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF3B30" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#FF3B30" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="orbGreen" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22C55E" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#22C55E" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="orbBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="orbPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="orbOrange" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF6B00" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#FF6B00" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- Spectrum Gradient for Border -->
+    <linearGradient id="spectrumBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3B30" />
+      <stop offset="20%" stop-color="#FF6B00" />
+      <stop offset="40%" stop-color="#FFCC00" />
+      <stop offset="60%" stop-color="#22C55E" />
+      <stop offset="80%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#A855F7" />
+    </linearGradient>
+    
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.035)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <style>
+    .aurora-1 { animation: float1 18s ease-in-out infinite alternate; }
+    .aurora-2 { animation: float2 22s ease-in-out infinite alternate; }
+    .aurora-3 { animation: float3 25s ease-in-out infinite alternate; }
+    .aurora-4 { animation: float4 16s ease-in-out infinite alternate; }
+    .aurora-5 { animation: float5 20s ease-in-out infinite alternate; }
+    
+    .floating-card { animation: cardFloat 7s ease-in-out infinite alternate; }
+    .floating-card-2 { animation: cardFloat2 8s ease-in-out infinite alternate; }
+    
+    .node { animation: nodePulse 3s ease-in-out infinite; }
+    .line-flow { stroke-dasharray: 100; stroke-dashoffset: 100; animation: flowDash 8s linear infinite; }
+    
+    @keyframes float1 {
+      0% { transform: translate(100px, -50px) scale(1); }
+      100% { transform: translate(-30px, 60px) scale(1.2); }
+    }
+    @keyframes float2 {
+      0% { transform: translate(500px, 120px) scale(1.1); }
+      100% { transform: translate(620px, -40px) scale(0.9); }
+    }
+    @keyframes float3 {
+      0% { transform: translate(300px, -30px) scale(0.95); }
+      100% { transform: translate(400px, 130px) scale(1.3); }
+    }
+    @keyframes float4 {
+      0% { transform: translate(-20px, 120px) scale(1.25); }
+      100% { transform: translate(100px, 10px) scale(0.85); }
+    }
+    @keyframes float5 {
+      0% { transform: translate(650px, 200px) scale(0.9); }
+      100% { transform: translate(450px, 100px) scale(1.2); }
+    }
+    @keyframes cardFloat {
+      0% { transform: translateY(0px) rotate(0.5deg); }
+      100% { transform: translateY(-8px) rotate(-0.5deg); }
+    }
+    @keyframes cardFloat2 {
+      0% { transform: translateY(-4px) rotate(-0.3deg); }
+      100% { transform: translateY(6px) rotate(0.3deg); }
+    }
+    @keyframes nodePulse {
+      0%, 100% { r: 3.5px; opacity: 0.4; }
+      50% { r: 5.5px; opacity: 0.95; }
+    }
+    @keyframes flowDash {
+      to { stroke-dashoffset: -200; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="850" height="320" fill="#09090B" />
+  
+  <!-- Aurora Gradients -->
+  <circle class="aurora-1" cx="0" cy="0" r="230" fill="url(#orbRed)" style="transform-origin: 0px 0px;" />
+  <circle class="aurora-2" cx="0" cy="0" r="260" fill="url(#orbPurple)" style="transform-origin: 0px 0px;" />
+  <circle class="aurora-3" cx="0" cy="0" r="210" fill="url(#orbBlue)" style="transform-origin: 0px 0px;" />
+  <circle class="aurora-4" cx="0" cy="0" r="240" fill="url(#orbGreen)" style="transform-origin: 0px 0px;" />
+  <circle class="aurora-5" cx="0" cy="0" r="220" fill="url(#orbOrange)" style="transform-origin: 0px 0px;" />
+
+  <!-- Grid Overlay -->
+  <rect width="850" height="320" fill="url(#grid)" />
+  
+  <!-- Abstract Design Nodes & Flow Paths -->
+  <g opacity="0.35">
+    <path class="line-flow" d="M 80 240 Q 200 120 400 210 T 780 110" fill="none" stroke="url(#spectrumBorder)" stroke-width="1.5" />
+    <circle cx="80" cy="240" r="4" fill="#FF3B30" />
+    <circle cx="260" cy="160" r="5" fill="#FFCC00" class="node" style="animation-delay: 0.4s;" />
+    <circle cx="400" cy="210" r="4" fill="#22C55E" />
+    <circle cx="610" cy="160" r="5" fill="#2563EB" class="node" style="animation-delay: 1.1s;" />
+    <circle cx="780" cy="110" r="4" fill="#A855F7" />
+  </g>
+
+  <!-- Floating UI Panel 1 (Figma-ish layout) -->
+  <g class="floating-card" style="transform-origin: 180px 110px;">
+    <!-- Translucent Background -->
+    <rect x="70" y="50" width="220" height="110" rx="8" fill="rgba(15,15,22,0.78)" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+    <!-- Gradient Border Accent -->
+    <rect x="70" y="50" width="220" height="110" rx="8" fill="none" stroke="url(#spectrumBorder)" stroke-width="1.2" opacity="0.35" />
+    
+    <!-- UI Fragments inside panel -->
+    <circle cx="95" cy="80" r="10" fill="#FF3B30" opacity="0.8" />
+    <circle cx="95" cy="80" r="4" fill="#09090B" />
+    <rect x="115" y="72" width="110" height="6" rx="3" fill="rgba(255,255,255,0.18)" />
+    <rect x="115" y="84" width="70" height="5" rx="2.5" fill="rgba(255,255,255,0.09)" />
+    
+    <!-- Slider UI indicator -->
+    <line x1="95" y1="120" x2="225" y2="120" stroke="rgba(255,255,255,0.1)" stroke-width="2" stroke-linecap="round" />
+    <line x1="95" y1="120" x2="165" y2="120" stroke="#FFCC00" stroke-width="2" stroke-linecap="round" />
+    <circle cx="165" cy="120" r="4.5" fill="#FFFFFF" stroke="#FFCC00" stroke-width="1" />
+  </g>
+
+  <!-- Floating UI Panel 2 (Code/AI-ish layout) -->
+  <g class="floating-card-2" style="transform-origin: 670px 190px;">
+    <rect x="550" y="130" width="230" height="120" rx="8" fill="rgba(15,15,22,0.78)" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+    <rect x="550" y="130" width="230" height="120" rx="8" fill="none" stroke="url(#spectrumBorder)" stroke-width="1.2" opacity="0.35" />
+    
+    <!-- Mini Code Editor / Graph Visual -->
+    <rect x="570" y="150" width="44" height="44" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+    <!-- Holographic Wave inside the box -->
+    <path d="M 575 180 C 585 160, 590 185, 600 165" stroke="url(#spectrumBorder)" stroke-width="1.5" fill="none" />
+    
+    <!-- Text Elements -->
+    <rect x="625" y="152" width="120" height="6" rx="3" fill="rgba(255,255,255,0.18)" />
+    <rect x="625" y="164" width="90" height="5" rx="2.5" fill="rgba(255,255,255,0.09)" />
+    <rect x="625" y="176" width="60" height="5" rx="2.5" fill="rgba(255,255,255,0.05)" />
+    
+    <!-- Tag Pill -->
+    <rect x="570" y="210" width="65" height="18" rx="9" fill="rgba(34,197,94,0.12)" stroke="rgba(34,197,94,0.2)" stroke-width="1" />
+    <text x="581" y="222" fill="#22C55E" font-family="sans-serif" font-size="8.5" font-weight="bold">AI ACTIVE</text>
+    
+    <!-- Micro Design Node -->
+    <circle cx="730" cy="219" r="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+    <path d="M 727 219 L 733 219 M 730 216 L 730 222" stroke="#FFFFFF" stroke-width="1" />
+  </g>
+</svg>

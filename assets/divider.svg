@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="12" viewBox="0 0 800 12">
+  <defs>
+    <linearGradient id="divGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF3B30" />
+      <stop offset="14%" stop-color="#FF6B00" />
+      <stop offset="28%" stop-color="#FFCC00" />
+      <stop offset="42%" stop-color="#22C55E" />
+      <stop offset="56%" stop-color="#00C7BE" />
+      <stop offset="70%" stop-color="#2563EB" />
+      <stop offset="84%" stop-color="#7C3AED" />
+      <stop offset="100%" stop-color="#FF3B30" />
+    </linearGradient>
+    <pattern id="flowPattern" width="800" height="12" patternUnits="userSpaceOnUse">
+      <rect width="1600" height="2" y="5" fill="url(#divGrad)">
+        <animateTransform 
+          attributeName="transform" 
+          type="translate" 
+          from="0,0" to="-800,0" 
+          dur="8s" 
+          repeatCount="indefinite" />
+      </rect>
+    </pattern>
+    <filter id="glow" x="-10%" y="-100%" width="120%" height="300%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="12" fill="url(#flowPattern)" filter="url(#glow)" opacity="0.85" />
+</svg>

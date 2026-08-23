@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="280" viewBox="0 0 800 280">
+  <defs>
+    <!-- Glowing Node Filter -->
+    <filter id="nodeGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <!-- Central Node Spectrum Gradient -->
+    <linearGradient id="centerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3B30" />
+      <stop offset="25%" stop-color="#FFCC00" />
+      <stop offset="50%" stop-color="#22C55E" />
+      <stop offset="75%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#A855F7" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .background {
+      fill: #0F0F12;
+      stroke: rgba(255,255,255,0.05);
+      stroke-width: 1;
+    }
+    .const-line {
+      stroke: rgba(255,255,255,0.07);
+      stroke-width: 1.5;
+      stroke-dasharray: 4 4;
+    }
+    .const-line-active {
+      stroke: url(#centerGrad);
+      stroke-width: 1.5;
+      stroke-dasharray: 8 6;
+      animation: dashFlow 20s linear infinite;
+    }
+    .center-node {
+      stroke: url(#centerGrad);
+      stroke-width: 2.5;
+      fill: #1C1C1E;
+    }
+    .tool-node {
+      fill: #1C1C1E;
+      stroke: rgba(255,255,255,0.12);
+      stroke-width: 1;
+      transition: all 0.3s ease;
+    }
+    .tool-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      fill: #E5E5EA;
+      text-anchor: middle;
+    }
+    .center-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      fill: #FFFFFF;
+      text-anchor: middle;
+    }
+    .center-subtext {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      fill: #8E8E93;
+      text-anchor: middle;
+    }
+    
+    /* Animation Keyframes */
+    .float-top { animation: floatY 5s ease-in-out infinite alternate; }
+    .float-left { animation: floatX 6s ease-in-out infinite alternate; }
+    .float-right { animation: floatY 7s ease-in-out infinite alternate; }
+    .float-bottom { animation: floatX 5s ease-in-out infinite alternate; }
+    
+    @keyframes floatY {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-6px); }
+    }
+    @keyframes floatX {
+      0% { transform: translateX(0px); }
+      100% { transform: translateX(-5px); }
+    }
+    @keyframes dashFlow {
+      to { stroke-dashoffset: -200; }
+    }
+  </style>
+
+  <!-- Card Background -->
+  <rect class="background" x="2" y="2" width="796" height="276" rx="8" />
+
+  <!-- Connecting Lines -->
+  <!-- Inner Background lines -->
+  <line class="const-line" x1="400" y1="140" x2="400" y2="45" />
+  <line class="const-line" x1="400" y1="140" x2="280" y2="85" />
+  <line class="const-line" x1="400" y1="140" x2="520" y2="85" />
+  <line class="const-line" x1="400" y1="140" x2="240" y2="140" />
+  <line class="const-line" x1="400" y1="140" x2="560" y2="140" />
+  <line class="const-line" x1="400" y1="140" x2="280" y2="195" />
+  <line class="const-line" x1="400" y1="140" x2="520" y2="195" />
+  <line class="const-line" x1="400" y1="140" x2="400" y2="235" />
+
+  <!-- Animated Glowing Lines -->
+  <line class="const-line-active" x1="400" y1="140" x2="400" y2="45" />
+  <line class="const-line-active" x1="400" y1="140" x2="280" y2="85" />
+  <line class="const-line-active" x1="400" y1="140" x2="520" y2="85" />
+  <line class="const-line-active" x1="400" y1="140" x2="240" y2="140" />
+  <line class="const-line-active" x1="400" y1="140" x2="560" y2="140" />
+  <line class="const-line-active" x1="400" y1="140" x2="280" y2="195" />
+  <line class="const-line-active" x1="400" y1="140" x2="520" y2="195" />
+  <line class="const-line-active" x1="400" y1="140" x2="400" y2="235" />
+
+  <!-- Orbiting Nodes -->
+  <!-- FIGMA (Top) -->
+  <g class="float-top" style="transform-origin: 400px 45px;">
+    <rect class="tool-node" x="350" y="28" width="100" height="34" rx="6" stroke="#FF6B00" />
+    <circle cx="365" cy="45" r="5" fill="#FF6B00" />
+    <text class="tool-text" x="408" y="49">FIGMA</text>
+  </g>
+
+  <!-- FRAMER (Top-Left) -->
+  <g class="float-left" style="transform-origin: 280px 85px;">
+    <rect class="tool-node" x="230" y="68" width="100" height="34" rx="6" stroke="#A855F7" />
+    <circle cx="245" cy="85" r="5" fill="#A855F7" />
+    <text class="tool-text" x="288" y="89">FRAMER</text>
+  </g>
+
+  <!-- NOTION (Top-Right) -->
+  <g class="float-right" style="transform-origin: 520px 85px;">
+    <rect class="tool-node" x="470" y="68" width="100" height="34" rx="6" stroke="#FFFFFF" />
+    <circle cx="485" cy="85" r="5" fill="#FFFFFF" />
+    <text class="tool-text" x="528" y="89">NOTION</text>
+  </g>
+
+  <!-- GITHUB (Left) -->
+  <g class="float-left" style="transform-origin: 240px 140px;">
+    <rect class="tool-node" x="190" y="123" width="100" height="34" rx="6" stroke="#00C7BE" />
+    <circle cx="205" cy="140" r="5" fill="#00C7BE" />
+    <text class="tool-text" x="248" y="144">GITHUB</text>
+  </g>
+
+  <!-- REACT (Right) -->
+  <g class="float-right" style="transform-origin: 560px 140px;">
+    <rect class="tool-node" x="510" y="123" width="100" height="34" rx="6" stroke="#2563EB" />
+    <circle cx="525" cy="140" r="5" fill="#2563EB" />
+    <text class="tool-text" x="568" y="144">REACT</text>
+  </g>
+
+  <!-- SUPABASE (Bottom-Left) -->
+  <g class="float-bottom" style="transform-origin: 280px 195px;">
+    <rect class="tool-node" x="230" y="178" width="100" height="34" rx="6" stroke="#22C55E" />
+    <circle cx="245" cy="195" r="5" fill="#22C55E" />
+    <text class="tool-text" x="288" y="199">SUPABASE</text>
+  </g>
+
+  <!-- FIREBASE (Bottom-Right) -->
+  <g class="float-right" style="transform-origin: 520px 195px;">
+    <rect class="tool-node" x="470" y="178" width="100" height="34" rx="6" stroke="#FF3B30" />
+    <circle cx="485" cy="195" r="5" fill="#FF3B30" />
+    <text class="tool-text" x="528" y="199">FIREBASE</text>
+  </g>
+
+  <!-- AI Tools (Bottom) -->
+  <g class="float-bottom" style="transform-origin: 400px 235px;">
+    <rect class="tool-node" x="350" y="218" width="100" height="34" rx="6" stroke="#FFCC00" />
+    <circle cx="365" cy="235" r="5" fill="#FFCC00" />
+    <text class="tool-text" x="408" y="239">AI TOOLS</text>
+  </g>
+
+  <!-- Central Node -->
+  <g filter="url(#nodeGlow)">
+    <circle class="center-node" cx="400" cy="140" r="32" />
+    <text class="center-text" x="400" y="140">VIRAJ</text>
+    <text class="center-subtext" x="400" y="152">BUILDER</text>
+  </g>
+</svg>
