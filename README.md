@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Hero Banner -->
-<img src="assets/hero.svg" width="100%" alt="Viraj R Hero Banner" style="max-width: 850px; border-radius: 8px; margin-bottom: 24px;" />
+<img src="https://raw.githubusercontent.com/viraj3106/viraj3106/main/assets/hero.svg" width="100%" alt="Viraj R Hero Banner" style="max-width: 850px; border-radius: 8px; margin-bottom: 24px;" />
 
 # VIRAJ R
 
@@ -22,7 +22,7 @@
 </p>
 
 <!-- Animated Divider -->
-<img src="assets/divider.svg" width="100%" alt="Section Divider" style="max-width: 850px; margin: 16px 0;" />
+<img src="https://raw.githubusercontent.com/viraj3106/viraj3106/main/assets/divider.svg" width="100%" alt="Section Divider" style="max-width: 850px; margin: 16px 0;" />
 
 </div>
 
@@ -44,7 +44,7 @@
     </td>
     <td width="45%" style="border: none; vertical-align: top; padding-left: 20px; border-left: 1px solid rgba(255,255,255,0.08);">
       <p align="left" style="margin-top: 0;">
-        <img src="assets/status-indicator.svg" width="18" height="18" style="vertical-align: middle; margin-right: 8px;" />
+        <img src="https://raw.githubusercontent.com/viraj3106/viraj3106/main/assets/status-indicator.svg" width="18" height="18" style="vertical-align: middle; margin-right: 8px;" />
         <b>CURRENTLY BUILDING</b>
       </p>
       <ul style="font-size: 13px; line-height: 1.8; color: #E5E5EA; padding-left: 20px;">
@@ -58,14 +58,14 @@
 </table>
 
 <div align="center">
-  <img src="assets/divider.svg" width="100%" alt="Section Divider" style="max-width: 850px; margin: 16px 0;" />
+  <img src="https://raw.githubusercontent.com/viraj3106/viraj3106/main/assets/divider.svg" width="100%" alt="Section Divider" style="max-width: 850px; margin: 16px 0;" />
 </div>
 
 <a name="work"></a>
 ## 02 — SELECTED WORK
 
 <div align="center">
-  <img src="assets/repository-stack.svg" width="100%" alt="Animated Project Card Stack" style="max-width: 800px; margin-bottom: 24px; border-radius: 8px;" />
+  <img src="https://raw.githubusercontent.com/viraj3106/viraj3106/main/assets/repository-stack.svg" width="100%" alt="Animated Project Card Stack" style="max-width: 800px; margin-bottom: 24px; border-radius: 8px;" />
 </div>
 
 <table width="100%" style="border-collapse: collapse; border: none;">
@@ -117,7 +117,7 @@
 </table>
 
 <div align="center">
-  <img src="assets/divider.svg" width="100%" alt="Section Divider" style="max-width: 850px; margin: 16px 0;" />
+  <img src="https://raw.githubusercontent.com/viraj3106/viraj3106/main/assets/divider.svg" width="100%" alt="Section Divider" style="max-width: 850px; margin: 16px 0;" />
 </div>
 
 <a name="design"></a>
@@ -161,7 +161,7 @@ Rather than using metrics or percentages, here are the methodologies I apply acr
 </table>
 
 <div align="center">
-  <img src="assets/divider.svg" width="100%" alt="Section Divider" style="max-width: 850px; margin: 16px 0;" />
+  <img src="https://raw.githubusercontent.com/viraj3106/viraj3106/main/assets/divider.svg" width="100%" alt="Section Divider" style="max-width: 850px; margin: 16px 0;" />
 </div>
 
 <a name="process"></a>
@@ -170,7 +170,7 @@ Rather than using metrics or percentages, here are the methodologies I apply acr
 Designing isn't just about drawing interfaces. It is a systematic process of translation from understanding to building:
 
 <div align="center">
-  <img src="assets/design-process.svg" width="100%" alt="Design Process Timeline" style="max-width: 800px; margin: 16px 0;" />
+  <img src="https://raw.githubusercontent.com/viraj3106/viraj3106/main/assets/design-process.svg" width="100%" alt="Design Process Timeline" style="max-width: 800px; margin: 16px 0;" />
 </div>
 
 <br />
@@ -179,11 +179,11 @@ Designing isn't just about drawing interfaces. It is a systematic process of tra
 Understanding the bridge from user discovery to building business and product impact:
 
 <div align="center">
-  <img src="assets/product-thinking.svg" width="100%" alt="Product Thinking Flow" style="max-width: 800px; margin: 16px 0;" />
+  <img src="https://raw.githubusercontent.com/viraj3106/viraj3106/main/assets/product-thinking.svg" width="100%" alt="Product Thinking Flow" style="max-width: 800px; margin: 16px 0;" />
 </div>
 
 <div align="center">
-  <img src="assets/divider.svg" width="100%" alt="Section Divider" style="max-width: 850px; margin: 16px 0;" />
+  <img src="https://raw.githubusercontent.com/viraj3106/viraj3106/main/assets/divider.svg" width="100%" alt="Section Divider" style="max-width: 850px; margin: 16px 0;" />
 </div>
 
 <a name="stack"></a>
@@ -192,11 +192,11 @@ Understanding the bridge from user discovery to building business and product im
 This constellation maps out the core product design, prototyping, engineering, and data tools I rely on:
 
 <div align="center">
-  <img src="assets/constellation.svg" width="100%" alt="Technology Constellation" style="max-width: 800px; margin: 16px 0;" />
+  <img src="https://raw.githubusercontent.com/viraj3106/viraj3106/main/assets/constellation.svg" width="100%" alt="Technology Constellation" style="max-width: 800px; margin: 16px 0;" />
 </div>
 
 <div align="center">
-  <img src="assets/divider.svg" width="100%" alt="Section Divider" style="max-width: 850px; margin: 16px 0;" />
+  <img src="https://raw.githubusercontent.com/viraj3106/viraj3106/main/assets/divider.svg" width="100%" alt="Section Divider" style="max-width: 850px; margin: 16px 0;" />
 </div>
 
 <a name="repositories"></a>
@@ -222,7 +222,7 @@ This constellation maps out the core product design, prototyping, engineering, a
 </table>
 
 <div align="center">
-  <img src="assets/divider.svg" width="100%" alt="Section Divider" style="max-width: 850px; margin: 16px 0;" />
+  <img src="https://raw.githubusercontent.com/viraj3106/viraj3106/main/assets/divider.svg" width="100%" alt="Section Divider" style="max-width: 850px; margin: 16px 0;" />
 </div>
 
 <a name="contact"></a>
