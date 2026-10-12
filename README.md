@@ -230,10 +230,7 @@ This constellation maps out the core product design, prototyping, engineering, a
 
 Open to conversations around UI/UX, product design, product building, and interesting digital products.
 
-*   **Portfolio:** [ADD_PORTFOLIO_LINK](https://github.com/viraj3106)
-*   **LinkedIn:** [ADD_LINKEDIN_LINK](https://github.com/viraj3106)
-*   **Email:** `ADD_EMAIL_LINK`
-*   **GitHub:** [github.com/viraj3106](https://github.com/viraj3106)
+
 
 <br />
 
